@@ -43,7 +43,15 @@ h1 {
     position: absolute;
     right: 15px;
     top: 5px;
+    font-size: 1.5em;
     cursor: pointer;
+    color: teal;
+    border: none;
+    background: #fff;
+    transition: font-size .2s;
+}
+.modal-close:hover {
+    font-size: 1.6em;
 }
 
 /* Grid Container */
@@ -98,5 +106,15 @@ h2{
 @media screen and (min-width: 1024px) {
     .grid-container {
         margin: 25px auto 0;
+    }
+}
+@media screen and (min-width: 1300px) {
+    h1 {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 711px) {
+    .grid-container {
+        margin: 25px 0;
     }
 }
