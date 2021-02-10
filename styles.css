@@ -6,11 +6,14 @@ body {
     position: relative;
     background-color: #FBFAF5;
     font-family: 'Barlow', sans-serif;
+    margin: 0;
 }
 
 h1 {
     font-size: 1.25em;
-    margin-left: 8px;
+    margin-left: 25px;
+    margin-top: 0;
+    padding-top: 25px;
 }
 
 /* Modular window */
@@ -45,27 +48,35 @@ h1 {
 
 /* Grid Container */
 .grid-container {
+    max-width: 1250px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin: 25px 25px;
-    grid-gap: 25px 50px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    margin: 25px 25px 0;
+    padding-bottom: 25px;
+    grid-gap: 25px 12px;
     justify-items: center;
 }
 
 
 .card {
+    width: 350px;
     border: .75px solid teal;
     border-radius: 8px;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
     padding: 1em;
+    transition: width .25s, box-shadow .25s, border .25s;
+    cursor: pointer;
+}
+.card:hover {
+    width: 355px;
+    box-shadow: 5px 5px 10px rgb(128,128,128,.5);
+    border: 1.25px solid teal;
 }
 p {
     margin: 5px 0;
     color: slategray;
-    font-size: .9em;
+    font-size: .85em;
 }
 h2{
     margin-bottom: 10px;
@@ -76,5 +87,16 @@ h2{
     height: 100px;
     border-radius: 50%;
     padding: 0;
-    margin-right: 15px;
+    margin-right: 20px;
   }
+
+  .modal-content p {
+    margin: 10px 0 10px;
+  }
+  
+
+@media screen and (min-width: 1024px) {
+    .grid-container {
+        margin: 25px auto 0;
+    }
+}
